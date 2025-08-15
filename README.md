@@ -70,6 +70,6 @@ GitLearn prioritizes security by keeping user data anonymous and avoiding the ne
 
 ### 📖 License & Copyright
 
-This project is licensed under the MIT License. For more information, see the LICENSE file.
+This project is licensed under the [MIT License](./LICENSE). For more information, see the LICENSE file.
 
 This project is not affiliated with, endorsed, or sponsored by © GitHub 2025. This is an independent, non-profit, project created purely for educational and inspirational purposes. All trademarks, logos, and brand names associated with Mastermind are the property of their respective owners.
