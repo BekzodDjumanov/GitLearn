@@ -1,0 +1,71 @@
+<h2>Git Revert</h2>
+<p>Reverting is the process where a new commit <strong>undoes</strong> previous changes done by another (commit). "git revert" is a safe and encouraged command that conserves clear project history (superb for collaboration).</p>
+
+<div class="list-elements">
+    <ul>
+        <li>Safely undo changes without rewriting history.</li>
+
+        <li>Preserve a clear project history (good for collaboration).</li>
+            
+        <li>Can selectively undo commits.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Important Feature</h2>
+<p><i class="fa-solid fa-comments"></i> You can revert multiple commits either one by one or within a specified commit range.</p>
+
+<h2 class="guide-title">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Revert a single commit</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git revert &lt;commit-hash&gt;
+</div>
+
+<h4 style="margin-top: 1rem;">Revert multiple commits (from newest to oldest)</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git revert &lt;newest-commit&gt;^..&lt;oldest-commit&gt;
+</div>
+
+<h4 style="margin-top: 1rem;">Edit commit hash</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git revert --edit &lt;commit-hash&gt;
+</div>
+
+<h2 class="guide-title">Comparison</h2>
+<div class="compare">
+    <div class="compare-items header">
+      <p>Purpose</p>
+      <p>Reset</p>
+      <p>Revert</p>
+    </div>
+    <div class="compare-items">
+      <p>History impact</p>
+      <p>Moves branch pointer, rewrites history</p>
+      <p>Creates new commit, preserves history</p>
+    </div>
+    <div class="compare-items">
+      <p>Use case</p>
+      <p>Undo local commits before sharing</p>
+      <p>Undo commits safely on shared branches</p>
+    </div>
+    <div class="compare-items">
+      <p>Effect on working directory</p>
+      <p>Can reset files to previous state</p>
+      <p>Does not change working directory</p>
+    </div>
+</div>
+  
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">"git revert" is a command used to safely undo changes introduced by previous commits by creating new commits that reverse those changes.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does git revert do to the commit history?</h4>
+<h4 class="question-sub">Can you revert multiple commits at once using git revert?</h4>
+<h4 class="question-sub">Why is git revert considered safer for multiple branches?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

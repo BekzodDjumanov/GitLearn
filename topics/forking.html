@@ -1,0 +1,87 @@
+<h2>Forking Workflow</h2>
+<p>A forking workflow is a model commonly employed in open-source projects. Instead of pushing directly to the main repository, contributors fork the repository into their own account, make changes, and then submit a Pull Request to merge changes back into the original repository.</p>
+
+
+<h2 class="guide-title">How it Works</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>1. Fork the repository to your own GitHub account. </li>
+
+        <li>2. Clone your fork locally. </li>
+            
+        <li>3. Create a branch for your feature or fix. </li>
+
+        <li>4. Make changes and commit locally. </li>
+
+        <li>5. Push the branch to your forked repository. </li>
+
+        <li>6. Open a Pull Request to merge your branch into the original repository. </li>
+    </ul>
+</div>
+
+<h2 class="guide-title">When to Use</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Open source projects with many contributors.</li>
+
+        <li>When contributors don’t have write access to the main repository.</li>
+            
+        <li>Projects requiring review before merging code.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Common Workflow Command</h2>
+
+<div class="git-init-badge-workflow" style="margin-top: 1rem;">
+    <span2># Fork the repo on GitHub, then clone it locally <br></span2>
+    <span class="prompt">$</span> git clone https://github.com/your-username/forked-repo.git <br><br>
+
+    <span2>## Create a new branch <br></span2>
+    <span class="prompt">$</span> git checkout -b feature/add-login <br><br>
+
+    <span2># Commit changes </span2> <br>
+    <span class="prompt">$</span> git add . <br>
+    <span class="prompt">$</span> git commit -m "Add login feature" <br><br>
+    
+    <span2># Push to your fork <br></span2>
+    <span class="prompt">$</span> git push origin feature/add-login <br><br>
+
+    <span2># Open Pull Request on GitHub <br></span2>
+</div>
+
+<h2 class="summary" style="color: oklch(87.1% .15 154.449);">Advantages</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Protects the main repository from unapproved changes.</li>
+
+        <li>Allows many contributors to work independently.</li>
+
+        <li>Enables structured code review via Pull Requests.</li>       
+    </ul>
+</div>
+
+<h2 class="summary" style="color: oklch(87.1% 0.30 30)">Disadvantages</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Slightly more steps than direct branch workflows.</li>
+
+        <li>Contributors must manage their own fork and keep it updated.</li>
+            
+    </ul>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">A forking workflow is when developers fork an open-source repository, make changes in their fork, and then submit a Pull Request to merge their commits into the main branch.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">Why is forking commonly used in open source projects?</h4>
+<h4 class="question-sub">What are the advantages of using a fork instead of working directly on main?</h4>
+<h4 class="question-sub">What is a Pull Request in the context of a fork?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

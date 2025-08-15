@@ -1,0 +1,93 @@
+<h2>Remote Repositories</h2>
+<p>Remote repositories are versions of a project or development that are hosted on the internet or a network. This allows users to collaborate seamlessly.</p>
+
+<h2 class="guide-title">Common Hosting Platforms</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>GitHub – Most popular hosting platform for open-source and private projects.</li>
+
+        <li>GitLab – Great for self-hosting and offers CI/CD components.</li>
+
+        <li>Bitbucket – Supports Git and Mercurial, ideal for large-scale environments.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Local vs Remote Repositories</h2>
+
+<div class="compare">
+    <div class="compare-items header">
+      <p>Aspect</p>
+      <p>Local Repository</p>
+      <p>Remote Repository</p>
+    </div>
+    <div class="compare-items">
+      <p>Location</p>
+      <p>Stored on your personal computer or local machine</p>
+      <p>Stored on a server or cloud platform like GitHub, GitLab, or Bitbucket</p>
+    </div>
+    <div class="compare-items">
+      <p>Access</p>
+      <p>Accessible only on your machine unless shared manually</p>
+      <p>Accessible to anyone with the proper permissions over the internet</p>
+    </div>
+    <div class="compare-items">
+      <p>Collaboration</p>
+      <p>Limited to people who can access your machine directly</p>
+      <p>Allows multiple people to work together from anywhere</p>
+    </div>
+    <div class="compare-items">
+      <p>Backup</p>
+      <p>No backup unless you create it manually</p>
+      <p>Serves as a backup copy of your project online</p>
+    </div>
+    <div class="compare-items">
+      <p>Synchronization</p>
+      <p>Changes stay local until pushed to a remote</p>
+      <p>Updates require pulling from or pushing to local repositories</p>
+    </div>
+</div>
+
+<h2 class="guide-title">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Connects local repo to remote</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git remote add &lt;name&gt; &lt;url&gt;
+</div>
+
+<h4 style="margin-top: 1rem;">Shows connections to local repo</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git remote -v
+</div>
+
+<h4 style="margin-top: 1rem;">Sends commits from local to remote branch</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git push &lt;remote&gt; branch&gt;
+</div>
+
+<h4 style="margin-top: 1rem;">Fetches changes from remote and merges them into local branch</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git pull &lt;remote&gt; branch&gt;
+</div>
+
+<h4 style="margin-top: 1rem;">Download changes from remote without merging</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git fetch &lt;remote&gt;
+</div>
+
+<h4 style="margin-top: 1rem;">Clones <strong>local</strong> copy of remote repo</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git clone &lt;url&gt;
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">Remote repositories are hosted virtually, allowing others to efficiently collaborate with your visions.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">Does a local repository automatically sync with its remote repository without any Git commands?</h4>
+<h4 class="question-sub">What is the difference between git pull and git fetch?</h4>
+<h4 class="question-sub">You can connect your local repository to multiple remotes. What is this useful for?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

@@ -1,0 +1,60 @@
+<h2>Git Stash</h2>
+<p>Stash is a component in Git that stores changes that have not been committed, allowing users to assess their software without losing their work. It’s like a “clipboard” for uncommitted changes — you can stash them away and bring them back later.</p>
+
+<div class="list-elements">
+    <ul>
+        <li>Saves tracked file changes (and optionally untracked files).</li>
+        <li>Clears the working directory to match the last commit.</li>
+        <li>Useful when you need to switch branches or pull changes without committing your in-progress work.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Stores tracked changes</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git stash <br>
+</div>
+
+<h4 style="margin-top: 1rem;">Stores tracked and untracked changes</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git stash -u <br>
+</div>
+
+<h4 style="margin-top: 1rem;">Shows all stashes</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git stash list <br>
+</div>
+
+<h4 style="margin-top: 1rem;">Apply the most recent stash but keep it in the list</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git stash apply <br>
+</div>
+
+<h4 style="margin-top: 1rem;">Apply the most recent stash and remove it from the list</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git stash pop <br>
+</div>
+
+<h4 style="margin-top: 1rem;">Delete a specific stash</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git stash drop <br>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">git stash saves unsaved changes for later, allowing you to work on other work without losing progress.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does git stash pop do that git stash apply does not?</h4>
+<h4 class="question-sub">How do you stash both tracked and untracked files?</h4>
+<h4 class="question-sub">Can you have multiple stashes saved at once in Git?</h4>
+
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

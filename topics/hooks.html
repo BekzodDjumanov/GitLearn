@@ -1,0 +1,37 @@
+<h2>Hooks</h2>
+<p>Git Hooks are scripts that Git automatically executes before or after certain events, like committing, merging, or pushing. They help automate tasks and enforce rules in your workflow.</p>
+
+<h2 class="guide-title">Types of Hooks</h2>
+<h4 style="margin-top: 1rem;">Client-side hooks</h4>
+
+<div class="list-elements">
+    <ul>
+        <li>pre-commit: Runs before a commit is created.</li>
+        <li>prepare-commit-msg: Before commit message editor</li>
+        <li>commit-msg: Validates or modifies commit messages.</li>
+        <li>post-commit: After commit is created</li>
+        <li>pre-push: Runs before push is commited.</li>
+    </ul>
+</div>
+
+<h4 style="margin-top: 1rem;">Server-side hooks</h4>
+
+<div class="list-elements">
+    <ul>
+        <li>pre-receive: Checks incoming commits before accepting a push.</li>
+        <li>post-receive: Runs after a successful push, often used for deployments.</li>
+        <li>update: Runs for each branch or ref updated</li>
+        <li>post-update: Runs after each branch of ref is updated</li>
+    </ul>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">"git hooks" are scripts that run within specified times in a git workflow</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What is the difference between client-side and server-side Git hooks?</h4>
+<h4 class="question-sub">Give an example of when you might use a pre-commit hook.</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Advanced Git Complete</h2>
+</div>

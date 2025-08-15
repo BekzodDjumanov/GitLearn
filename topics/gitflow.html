@@ -1,0 +1,88 @@
+<h2>Gitflow Workflow</h2>
+<p>A gitflow workflow is a large-scale branching model that orchestrates work into multiple branches for structured and cohesive development. It uses several branch types to separate features, releases, hotfixes, and the main development branch.</p>
+
+<h2 class="guide-title">How it Works</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>1. Main (main or master) branch — contains only production-ready code. </li>
+
+        <li>2. Develop branch — integration branch where features are merged before release.</li>
+            
+        <li>3. Feature branches — branched from develop for new features.</li>
+
+        <li>4. Release branches — branched from develop to prepare a new production release.</li>
+
+        <li>5. Hotfix branches — branched from main to quickly fix production issues.</li>
+
+        <li>6. Merge back into develop and/or main when complete.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">When to Use</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Medium to large projects with multiple developers.</li>
+
+        <li>Projects requiring clear release and hotfix management.</li>
+            
+        <li>Teams using CI/CD pipelines and code review processes.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Common Workflow Command</h2>
+
+<div class="git-init-badge-workflow" style="margin-top: 1rem;">
+    <span2># Start a new feature branch from develop <br></span2>
+    <span class="prompt">$</span> git checkout develop <br>
+    <span class="prompt">$</span> git checkout -b feature/new-dashboard <br><br>
+
+    <span2># Finish feature branch and merge back to develop <br></span2>
+    <span class="prompt">$</span> git checkout develop <br>
+    <span class="prompt">$</span> git merge feature/new-dashboard <br><br>
+
+   <span2># Start a release branch <br></span2>
+    <span class="prompt">$</span> git checkout -b release/1.2.0 develop <br><br>
+    
+    <span2># Finish release branch, merge into main and develop <br></span2>
+    <span class="prompt">$</span> git checkout main <br>
+    <span class="prompt">$</span> git merge release/1.2.0 <br>
+    <span class="prompt">$</span> git checkout develop <br>
+    <span class="prompt">$</span> git merge release/1.2.0  <br>
+</div>
+
+<h2 class="summary" style="color: oklch(87.1% .15 154.449);">Advantages</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Keeps production code stable.</li>
+
+        <li>Supports parallel development. </li>
+        
+        <li>Organized release and hotfix process.</li>
+    </ul>
+</div>
+
+<h2 class="summary" style="color: oklch(87.1% 0.30 30)">Disadvantages</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Highly complex and much more demanding than other workflows.</li>
+
+        <li>Requires strict adherence to branching rules.</li>
+            
+    </ul>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">Gitflow is a structured workflow that uses multiple branches — like develop, feature, release, and hotfix — which are merged into main only when ready for production.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What is the purpose of the develop branch in Gitflow?</h4>
+<h4 class="question-sub">How do feature branches differ from hotfix branches?</h4>
+<h4 class="question-sub">Why is Gitflow more structured than a feature branch workflow?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

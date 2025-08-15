@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <title>GitLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="site-header">
+          <div class="header-left">
+            <label id="hamburger" class="hamburger">
+                <input type="checkbox" />
+                <svg viewBox="0 0 32 32">
+                  <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                  <path class="line" d="M7 16 27 16"></path>
+                </svg>
+              </label>
+              <a href="index.html"><h1 class="logo"><i class='bx  bx-git-repo-forked'  ></i> GitLearn</h1></a>
+            <nav class="nav-links">
+              <a href="#">Git Basics</a>
+              <a href="https://github.com/BekzodDjumanov/GitLearn">GitHub</a>
+              <a href="values.html">Our Values</a>
+              <a href="https://github.com/community">Community</a>
+            </nav>
+          </div>
+      
+          <div class="header-right">
+              <div class="git-init-badge">
+                <span class="prompt">$</span> git learn
+              </div>
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search Documentation"
+              aria-label="Search Documentation"
+            />
+            <ul class="search-results"></ul>
+            <div class="github-logo">
+                <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="#">Git Basics</a>
+          <a href="https://github.com/BekzodDjumanov/GitLearn">GitHub</a>
+          <a href="values.html">Our Values</a>
+          <a href="https://github.com/community">Community</a>
+        </div>
+        
+      </header>  
+      
+
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <div class="started-hamburger">
+            <input id="checkbox2" type="checkbox">
+            <label class="toggle toggle2" for="checkbox2">
+                <i class="fa-solid fa-gear"></i>
+            </label>
+        </div>
+
+        <section class="git-section" id="git-learn">
+            <div class="git-container">
+                
+                <aside class="sidebar">
+                <h2><i class="fa-solid fa-circle-info" style="padding: .5rem;"></i>Overview</h2>
+                <ul class="sidebar-menu">
+                    <li class="menu-item">
+                        <a href="getting-started.html"><div class="menu-header">
+                            Introduction
+                    </div></a>
+                    <li class="menu-item">
+                        <div class="menu-header">
+                          1. Git Basics <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <ul class="submenu">
+                          <li data-topic="basic">Git and the Basics</li>
+                          <li data-topic="concepts">Version Control Concepts</li>
+                          <li data-topic="installation">Installation</li>
+                          <li data-topic="repo">Git Repository</li>
+                          <li class="menu-item">
+                            <li style="margin-top: -1.25rem;" class="menu-item menu-header" data-topic="commands-sub">
+                                Git Commands <i class="fa-solid fa-angle-down"></i>
+                              </li>                              
+                            <ul class="nested-submenu">
+                              <li style="margin-top: -.5rem;" data-topic="init">Git Init</li>
+                              <li data-topic="commit">Git Commit</li>
+                              <li data-topic="add">Git Add</li>
+                              <li data-topic="clone">Git Clone</li>
+                              <li data-topic="status">Git Status</li>
+                              <li data-topic="reset">Git Reset</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>                      
+                    <li class="menu-item">
+                    <div class="menu-header">
+                        2. Git Branching <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="submenu">
+                        <li data-topic="branch">Branches</li>
+                        <li data-topic="checkout">Git Checkout</li>
+                        <li data-topic="switch">Git Switch</li>
+                        <li data-topic="merge">Merging</li>
+                        <li data-topic="rebase">Rebase</li>
+                        <li data-topic="log">Log</li>
+                        <li data-topic="conflict">Merge Conflict</li>
+                    </ul>
+                    </li>
+                    <li class="menu-item">
+                    <div class="menu-header">
+                        3. Advanced Git<i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="submenu">
+                        <li data-topic="revert">Git Revert</li>
+                        <li data-topic="stash">Git Stash</li>
+                        <li data-topic="cherry">Cherry Pick</li>
+                        <li data-topic="amend">Amending Commits</li>
+                        <li data-topic="filter">Filter Branch</li>
+                        <li data-topic="tags">Tags</li>
+                        <li data-topic="hooks">Hooks</li>
+
+                    </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-header">
+                            4. Git Worflows<i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <ul class="submenu">
+                            <li data-topic="centralized">Centralized Workflow</li>
+                            <li data-topic="feature">Feature Branch Workflow</li>
+                            <li data-topic="gitflow">Gitflow Workflow</li>
+                            <li data-topic="forking">Forking Workflow</li>
+                            <li class="menu-item">
+                                <li style="margin-top: -1.25rem;" class="menu-item menu-header" data-topic="practices-sub">
+                                    Key Practices <i class="fa-solid fa-angle-down"></i>
+                                  </li>                              
+                                <ul class="nested-submenu" style="margin-top: -.5rem;" >
+                                    <li data-topic="branch-naming">Branch Naming</li>
+                                    <li data-topic="pull">Proper Pull Request's</li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
+                    <li class="menu-item">
+                        <div class="menu-header">
+                            5. Repositories<i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <ul class="submenu">
+                            <li data-topic="structure">Repository Structure</li>
+                            <li data-topic="remote">Remote Repositories</li>
+                            <li data-topic="syncing">Syncing</li>
+                            <li data-topic="fr">Forking Repositories</li>
+                            <li data-topic="ad">Archiving & Deleting</li>
+                            <li data-topic="settings">Repository Settings</li>
+                        </ul>
+                        </li>
+                    <li class="menu-item">
+                        <div class="menu-header">
+                            6. GitHub<i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <ul class="submenu">
+                            <li data-topic="account">Creating an Account</li>
+                            <li data-topic="profile">Setting up a Profile</li>
+                            <li data-topic="rh">Remote Hosting</li>
+                            <li data-topic="issues">Issues & Discussions</li>
+                            <li data-topic="collaboration">Collaboration</li>
+                            <li data-topic="security">Security</li>
+                            <li class="menu-item">
+                                <li style="margin-top: -1.25rem;" class="menu-item menu-header" data-topic="features-sub">
+                                    GitHub Features <i class="fa-solid fa-angle-down"></i>
+                                  </li>                              
+                                <ul class="nested-submenu">
+                                    <li style="margin-top: -.5rem;" data-topic="codespaces">GitHub Codespaces</li>
+                                    <li data-topic="marketplace">GitHub Marketplace</li>
+                                    <li data-topic="pages">GitHub Pages</li>
+                                    <li data-topic="copilot">GitHub Copilot</li>
+                                </ul>
+                              </li>
+                        </ul>
+                        </li>
+                    <li class="menu-item">
+                        <div class="menu-header">
+                            7. Git CI/CD<i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <ul class="submenu">
+                            <li data-topic="ci">Continuous Integration (CI)</li>
+                            <li data-topic="cd">Continuous Deployment (CD)</li>
+                            <li data-topic="actions">GitHub Actions</li>
+                            <li data-topic="labs">GitLabs</li>
+                            <li class="menu-item">
+                                <li style="margin-top: -1.25rem;" class="menu-item menu-header" data-topic="cicd-sub">
+                                    CI/CD Components <i class="fa-solid fa-angle-down"></i>
+                                  </li>                              
+                                <ul class="nested-submenu">
+                                    <li style="margin-top: -.5rem;" data-topic="pipelines">Pipelines</li>
+                                    <li data-topic="automated">Automated Testing</li>
+                                    <li data-topic="triggers">Triggers</li>
+                                    <li data-topic="ws">Workflow Status</li>
+                                </ul>
+                              </li>
+                        </ul>
+                        </li>
+                    <li class="menu-item">
+                        <div class="menu-header">
+                            8. Best Practice & Tips<i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <ul class="submenu">
+                            <li data-topic="documentation">Documentation</li>
+                            <li data-topic="readme">Including README.md</li>
+                            <li data-topic="code">Code Formatting & Visibility</li>
+                            <li class="menu-item">
+                                <li style="margin-top: -1.25rem;" class="menu-item menu-header" data-topic="naming-sub">
+                                    Naming Conventions <i class="fa-solid fa-angle-down"></i>
+                                  </li>                              
+                                <ul class="nested-submenu">
+                                  <li style="margin-top: -.5rem;" data-topic="commenting">Commenting & Naming</li>
+                                  <li data-topic="message">Commit Messages</li>
+                                </ul>
+                              </li>
+                            </ul>
+                        </li>
+                    <li class="menu-item" data-topic="conclusion">
+                        <div class="menu-header">
+                            End
+                        </div>
+                    </li>
+                </ul>
+                </aside>
+                <div class="overlay"></div>
+
+                <!-- Content Area -->
+                <div class="content" id="content">
+                <h1 id="topic-title"><i class="fa-solid fa-gift"></i> Welcome to GitLearn</h1>
+                <p id="topic-desc">GitLearn is a platform for ongoing learners to cultivate their awareness with Git and Github components. Please accustom yourself with the layout of this page moving forward.</p>
+                
+                    <p id="desc-1"><i class="fa-solid fa-lock"></i> Each lesson is categorized by a main topic.</p>
+                    <p id="desc-2"><i class="fa-solid fa-hand"></i> Please ensure to read carefully and complete the practice problems in order to fully understand the materials presented.</p>
+                    <p id="desc-3"><i class="fa-solid fa-check"></i> Once you are finished, feel free to move forward.</p>
+                    <p id="desc-4">Quick Video Demo</p>
+                    <video id="desc-5" class="git-mp4" width="500" height="300" controls>
+                        <source src="git.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    <a href="https://www.youtube.com/watch?v=hwP7WQkmECE&t=9s"><p id="desc-6">Video Source</p></a>
+            </div>
+
+            <div class="misc">
+                <div class="contribute">
+                    <h1>Contribute</h1>
+                    <a href="https://github.com/BekzodDjumanov/GitLearn/issues/new?template=bug_report.md"><p><i class="fa-solid fa-bug"></i> Report an issue</p></a>
+                    <a href="https://github.com/BekzodDjumanov/GitLearn/issues/new?template=feature_request.md"><p><i class="fa-solid fa-pen-to-square"></i> Edit a feature</p></a>
+                    <a href="https://github.com/BekzodDjumanov/GitLearn/issues/new?template=request-an-addition.md"><p><i class="fa-solid fa-hand-holding-heart"></i> Request an addition</p></a>
+                </div>
+            
+                <div class="notes">
+                    <h1>Notes</h1>
+                    <p>Feel free to star if you found this guide helpful!</p>
+                </div>
+            </div>
+
+                
+            </div>
+            </div>
+            </section>
+
+          
+
+        <!--SECTIONS HERE-->
+        </main>
+
+
+        <footer class="footer-started">
+            <div class="info">
+                <p>Information sourced from GitHub and Git technologies</p>
+            </div>
+            <div class="footer-l"></div>
+            <div class="rights-started">© 2025 GitLearn. All rights reserved.</div>
+        </footer>
+
+    </body>
+    </html>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src ="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+    <script>
+
+        gsap.to(".sidebar", 2, {
+            opacity: 1,
+            ease: "power2.inOut",
+        })
+
+        gsap.from(".sidebar", 2, {
+            x: "-50",
+            ease: "power2.inOut",
+        })
+
+        gsap.to(".content", 2, {
+            opacity: 1,
+            ease: "power2.inOut",
+        })
+
+        gsap.from(".content", 2, {
+            y: "-50",
+            ease: "power2.inOut",
+        })
+
+        gsap.to(".misc", 2, {
+            opacity: 1,
+            ease: "power2.inOut",
+        })
+
+        gsap.from(".misc", 2, {
+            x: "50",
+            ease: "power2.inOut",
+        })
+    </script>
+

@@ -1,0 +1,77 @@
+<h2>Filter Branch</h2>
+<p>git filter-branch is an advanced Git command used to rewrite history by applying filters to all or selected commits in a branch.</p>
+
+<div class="list-elements">
+    <ul>
+        <li>Removing sensitive data (e.g., passwords, API keys) from the entire history.</li>
+        <li>Changing commit author information.</li>
+        <li>Restructuring or renaming files throughout the repository’s history.</li>
+    </ul>
+</div>
+
+<div class="warning">
+    <p>git filter-branch is considered dangerous because it rewrites commit history. It has largely been replaced by <a class="click-me" href="http://github.com/newren/git-filter-repo">git filter-repo</a> for safety and performance.</p>
+ </div>
+
+<h2 class="guide-title">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Basic syntax</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git filter-branch [options] [revision-range]
+</div>
+
+<h4 style="margin-top: 1rem;">Removing a file</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git filter-branch --tree-filter 'rm -f secrets.txt' HEAD
+</div>
+
+<h2 class="guide-title">Filter-Branch Options</h2>
+
+<h4 style="margin-top: 1rem;">Force operation (overwrites existing backup)</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> --force
+</div>
+
+<h4 style="margin-top: 1rem;">Removes empty commits after filtering</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> --prune-empty
+</div>
+
+<h4 style="margin-top: 1rem;">Filter branches and tags</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> -- --all
+</div>
+
+<h4 style="margin-top: 1rem;">Filter by branch</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> -- --branches
+</div>
+
+<h4 style="margin-top: 1rem;">Filter by tag</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> -- --tags
+</div>
+
+<h4 style="margin-top: 1rem;">Original references backup location</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> --original refs/original/
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">"git filter-branch" allows users to rewrite git history by commit.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What is the main purpose of git filter-branch?</h4>
+<h4 class="question-sub">Why is it considered dangerous to use on shared repositories?</h4>
+<h4 class="question-sub">What modern Git tool is recommended instead of git filter-branch?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

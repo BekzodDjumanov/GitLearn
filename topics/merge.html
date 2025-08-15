@@ -1,0 +1,42 @@
+<h2>Merging</h2>
+<p>Merging allows two branches to become unified, integrating changes from one branch into another. It combines the histories of two branches, allowing you to bring feature or fix branches back into your main branch.</p>
+
+<div class="list-elements">
+    <ul>
+        <li><strong>Fast-forward merge: </strong>If the current branch is directly behind the target branch, Git simply moves the pointer forward — no new commit is created.</li>
+        <li><strong>Three-way merge: </strong>When branches have diverged, Git creates a new merge commit that combines the changes from both branches.</li>
+        <li><strong>Merge conflicts: </strong>Occur if the same parts of a file were changed differently in both branches. You’ll need to manually resolve these conflicts.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Merge a branch into your current branch</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git merge feature-branch
+</div>
+
+<h4 style="margin-top: 1rem;">Abort a conflict merge</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git merge --abort
+</div>
+
+<h4 style="margin-top: 1rem;">Shows a visual graph of branches and merges in your commit history</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git log --graph --oneline
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">"git merge" allows a user to combine two branches with their history and changes into one, maintaining a clean and collaborative workflow.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does the command git merge feature-branch do?</h4>
+<h4 class="question-sub">What is a fast-forward merge?</h4>
+<h4 class="question-sub">What should you do if you encounter merge conflicts during a git merge?</h4>
+
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

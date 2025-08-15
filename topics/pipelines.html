@@ -1,0 +1,48 @@
+<h2>Pipelines</h2>
+<p>Pipelines in CI/CD are automated workflows that streamline the development process. It orchestrates a series of steps to build, test, and deploy applications, ensuring consistent and frequent releases.</p>
+
+<h2 class="guide-sub">Key Components</h2>
+<div class="list-elements" style="margin-top: 1.5rem;">
+    <ul>
+        <li><i class="fa-solid fa-code"></i> <strong>Build</strong> – Compile code and create artifacts.</li>
+        <li><i class="fa-solid fa-flask"></i> <strong>Test</strong> – Run automated tests to validate functionality.</li>
+        <li><i class="fa-solid fa-cogs"></i> <strong>Deploy</strong> – Push changes to staging or production environments.</li>
+        <li><i class="fa-solid fa-bug"></i> <strong>Validate</strong> – Check for errors or merge conflicts before final deployment.</li>
+        <li><i class="fa-solid fa-rotate-right"></i> <strong>Feedback</strong> – Report results back to developers for action.</li>
+    </ul>
+</div>
+
+<h2 class="summary" style="color: oklch(87.1% .15 154.449);">The Goal</h2>
+<p>To ensure new code is published and reaches its designated destination without manual intervention.</p>
+
+<h2 class="guide-title">Common CI/CD Pipeline</h2>
+
+<div class="git-init-badge-workflow" style="margin-top: 1rem; display: block;">
+    <span2> # Developer pushes code to feature branch <br></span2>
+    <span class="prompt">$</span> git push origin feature/add-login<br><br>
+    
+    <span2># GitHub Actions CI/CD pipeline triggers automatically </span2><br>
+    - Install dependencies  <br>
+
+    - Run automated tests <br>
+
+    - Build the project <br>
+
+    - Deploy to staging environment <br>
+
+    - Notify developer of success/failure <br><br>
+
+    <span2> # Once approved, merge to main triggers deployment to production <br></span2>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">In essence, a pipeline is a set of automated tasks that transport code development to production.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What is the main purpose of a CI/CD pipeline?</h4>
+<h4 class="question-sub">What does continuous integration (CI) help prevent?</h4>
+<h4 class="question-sub">How does continuous deployment (CD) improve software delivery?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

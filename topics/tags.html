@@ -1,0 +1,83 @@
+<h2>Tags</h2>
+<p>In Git, tags are labels that reference a specific commit, often used to mark important points in history. They convey essential information and play a key role in branch names. It's important to note that they cannot be changed once created.</p>
+
+<div class="list-elements">
+    <ul>
+        <li>v1.0</li>
+        <li>v5.0</li>
+        <li>v7.5</li>
+    </ul>
+</div>
+
+<h2 class="guide-title" style="margin-top: 1rem;">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Creating a tag</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git tag v1.0
+</div>
+
+<h4 style="margin-top: 1rem;">Creating an annotated tag</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git tag -a v1.0 -m "Release version 1.0"
+</div>
+
+<h4 style="margin-top: 1rem;">You must push tags when created</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git push origin v1.0
+</div>
+
+<h4 style="margin-top: 1rem;">List tags</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git tag
+</div>
+
+<h4 style="margin-top: 1rem;">Delete tags</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git tag -d v1.0
+</div>
+
+<h2 class="guide-title">Comparison</h2>
+
+<div class="compare">
+    <div class="compare-items header">
+      <p>Feature</p>
+      <p>Git Tag</p>
+      <p>Git Branch</p>
+    </div>
+    <div class="compare-items">
+      <p>Purpose</p>
+      <p>Mark specific commits (e.g., releases, milestones)</p>
+      <p>Develop features and track ongoing work</p>
+    </div>
+    <div class="compare-items">
+      <p>Movement</p>
+      <p>Fixed reference — does NOT move after creation</p>
+      <p>Moves forward as new commits are added</p>
+    </div>
+    <div class="compare-items">
+      <p>Metadata</p>
+      <p>Can be annotated with messages, author info, date</p>
+      <p>No metadata; just a pointer to latest commit</p>
+    </div>
+    <div class="compare-items">
+        <p>Use Cases</p>
+        <p>Marking release points or snapshots</p>
+        <p>Active development and collaboration</p>
+      </div>
+  </div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">Tags are an important component of Git, as they allow users to mark important commits like updates and releases.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What is the difference between a lightweight tag and an annotated tag?</h4>
+<h4 class="question-sub">How do you push a specific tag to a remote repository?</h4>
+<h4 class="question-sub">Why might you use a tag instead of a branch for version releases?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

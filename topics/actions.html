@@ -1,0 +1,52 @@
+<h2>GitHub Actions</h2>
+<p>GitHub Actions is a CI/CD platform integrated directly within GitHub, allowing users to facilitate their automation workflows and software deployments. It allows users to create workflows that builds and tests every pull request to ones repository, or deploy merged pull requests to production.</p>
+
+<h2 class="guide-sub">1. Workflow Files</h2>
+<p>Workflows are defined in YAML files inside the <code>.github/workflows/</code> directory of your repository. Each file represents a workflow that runs on specific triggers.</p>
+<div class="git-init-badge-workflow" style="margin-top: 1rem;">
+    .github/workflows/
+</div>
+
+<h2 class="guide-sub">2. Triggers</h2>
+<ul class="list-elements">
+    <li>push → Runs when code is pushed to a branch.</li>
+    <li>pull_request → Runs on pull requests.</li>
+    <li>schedule → Runs at specific times using cron syntax.</li>
+    <li>workflow_dispatch → Manual trigger from GitHub UI.</li>
+</ul>
+
+<h2 class="guide-sub">3. Jobs and Steps</h2>
+<p>A workflow is made up of <strong>jobs</strong>, and each job contains multiple <strong>steps</strong>. Steps can run shell commands, scripts, or pre-built actions.</p>
+<div class="terminal">
+    <span class="prompt">$</span> name: CI <br>
+    on: [push] <br>
+    jobs: <br>
+    &nbsp;&nbsp;build: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;runs-on: ubuntu-latest <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;steps: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- uses: actions/checkout@v3 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: Install Dependencies <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;run: npm install <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: Run Tests <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;run: npm test <br>
+</div>
+
+<h2 class="guide-sub">4. Benefits</h2>
+<ul class="list-elements">
+    <li>Automates testing and deployment.</li>
+    <li>Integrates directly with GitHub repositories.</li>
+    <li>Customizable and reusable workflows via actions.</li>
+    <li>Supports multiple operating systems and environments.</li>
+</ul>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">GitHub Actions facilitates developers workflows by autonomously building and testing their products.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">Where are GitHub Actions workflows stored?</h4>
+<h4 class="question-sub">Name two triggers that can start a workflow.</h4>
+<h4 class="question-sub">What is the difference between a job and a step in a workflow?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

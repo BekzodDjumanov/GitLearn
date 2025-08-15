@@ -1,0 +1,61 @@
+<h2>Cherry Pick</h2>
+<p>Cherry Pick in Git is a feature that allows a developer to apply a commit to another designated branch, without merging the full branch history. It is a seamless way to infuse two branches without including past changes.</p>
+
+<div class="list-elements">
+    <ul>
+        <li>Works on a commit-by-commit basis.</li>
+        <li>Maintains the original commit’s changes but creates a <strong>new commit ID </strong>in the target branch.</li>
+        <li>Useful when a bug fix or feature made in one branch is needed in another without merging all changes.</li>
+        <div class="warning">
+            <p>Conflicts can happen if changes overlap, just like in merges.</p>
+        </div>
+    </ul>
+</div>
+
+<h2 class="guide-title" style="margin-top: 1rem;">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Apply a specific commit to the current branch</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git cherry pick &lt;commit-hash&gt;
+</div>
+
+<h4 style="margin-top: 1rem;"> Apply a range of commits (excluding A, including B).</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git cherry-pick A..B
+</div>
+
+<h4 style="margin-top: 1rem;"> Apply a range of commits including A and B</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git cherry-pick A^..B
+</div>
+
+<h4 style="margin-top: 1rem;"> Apply changes without creating a commit yet</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git cherry-pick --no-commit &lt;commit-hash&gt;
+</div>
+
+<h2 class="guide-title" style="margin-top: 1rem;">Best Practices</h2>
+
+<h4 style="margin-top: 1rem;"> Be cautious</h4>
+<p><i class="fa-solid fa-circle-exclamation"></i> Cherry pick can lead to duplicate commits, which can lead to conflicts in merging. In some circumstances, git merge or git rebase is preferred.</p>
+
+<h4 style="margin-top: 1rem;"> Add proper comments</h4>
+<p><i class="fa-solid fa-comment-dots"></i> When committing (git commit -m "message"), utilize proper and sustainable comments to identify the details of each cherry pick.</p>
+
+<h4 style="margin-top: 1rem;"> Testing and validation</h4>
+<p><i class="fa-solid fa-magnifying-glass"></i> Always ensure that a program works as expected after a cherry pick, otherwise you may result in reverting or reseting the commit.</p>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">git cherry-pick copies a specific commit from one branch to another, without merging the whole branch.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does git cherry-pick do differently from git merge?</h4>
+<h4 class="question-sub">Does cherry-picking keep the original commit hash? Why or why not?</h4>
+<h4 class="question-sub">How can you cherry-pick changes but delay committing them?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

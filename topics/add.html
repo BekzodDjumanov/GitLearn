@@ -1,0 +1,43 @@
+<h2>Add</h2>
+<p>The git add command updates the staging area (also called the index) by adding changes from your working directory. It does not save changes permanently—that’s what git commit does—but it marks specific files or changes for inclusion in the commit snapshot.</p>
+
+<div class="list-elements">
+    <ul>
+        <li><strong>Staging Area: </strong>Moves changes from your working directory to Git’s staging area (index).</li>
+        <li><strong>Selective Staging: </strong>You can choose specific files or even parts of files to stage.</li>
+        <li><strong>Selective Staging: </strong>Can stage new files, track previously untracked files, and stage modifications or deletions.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Stage a single file</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git add file.txt
+</div>
+
+<h4 style="margin-top: 1rem;">Stage all changes in the current directory</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git add .
+</div>
+
+<h4 style="margin-top: 1rem;">Stage all JavaScript files</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git add *.js
+</div>
+
+<h4 style="margin-top: 1rem;">Interactively stage parts of files</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git add -p
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">git add stages changes from your working directory, marking files or modifications to be included in the next commit. It helps you select what updates to save in your project’s history.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does git add . do?</h4>
+<h4 class="question-sub">What is the difference between git add and git commit?</h4>
+<h4 class="question-sub">Are there certain times where add . vs add file.txt would be better?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

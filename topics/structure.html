@@ -1,0 +1,56 @@
+<h2>Repository Structure</h2>
+<p>A repository structure refers to the organization of files and data within a version control system. It allows developers to configure their code and other relevant materials nicely.</p>
+
+<h2 class="guide-title">Common Structure</h2>
+
+<h4 class="guide-sub">.git Folder</h4>
+<p>Hidden folder storing all Git’s internal data: commits, branches, tags, refs, config, etc.</p>
+
+<h4 class="guide-sub">Working Directory</h4>
+<p>The actual files and folders you see/edit — your current checkout of the project.</p>
+
+<h4 class="guide-sub">Staging Area (Index)</h4>
+<p>Temporary area where changes are placed before committing.</p>
+
+<h4 class="guide-sub">HEAD</h4>
+<p>Pointer to the current branch or commit you’re working on.</p>
+
+<h4 class="guide-sub">Branches Folder (inside .git/refs/heads)</h4>
+<p>Stores references for each branch.</p>
+
+<h4 class="guide-sub">Objects Folder</h4>
+<p>Where Git stores the content of your files and commits in a compressed format.</p>
+
+<h4 class="guide-sub">Config Files</h4>
+<div class="git-init-badge-workflow" style="margin-top: 2rem;">
+    .git/config <i class="fa-solid fa-arrow-right"></i> Local repo config (remotes, merge settings, etc.)<br><br>
+    .gitignore <i class="fa-solid fa-arrow-right"></i> Files Git should ignore.<br><br>
+    .gitattributes <i class="fa-solid fa-arrow-right"></i> File-specific Git settings.<br>
+</div>
+
+<h4 class="guide-sub">Logs (.git/logs)</h4>
+<p>History of changes to HEAD and branches.</p>
+
+<h2 class="guide-title">Common Types of Structure</h2>
+
+<div class="list-elements">
+    <ul>
+        <li><strong>Monorepo: </strong>A single repository containing multiple related projects or modules.</li>
+        <li><strong>Polyrepo: </strong>Each distinct software aspect lies within its own environment, allowing for isolation and independent development.</li>
+        <li><strong>Component-based: </strong>Organizing code by distinct components or features, especially common in frontend frameworks like React.</li>
+    </ul>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">The structure of a repository allows developers to organize their software components.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What is stored inside the .git folder, and why should you avoid manually editing its contents?</h4>
+<h4 class="question-sub">How does the staging area (index) differ from the working directory?</h4>
+<h4 class="question-sub">Why is it important to have a .gitignore file in your repository structure?</h4>
+
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>
+

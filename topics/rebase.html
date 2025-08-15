@@ -1,0 +1,52 @@
+<h2>Rebase</h2>
+<p>Rebase is a powerful tool that takes the commits from one branch and reapplies them onto another branch, creating a linear, cleaner history without merge commits. Allowing users to create isolated environments for new projects and/or collaborations.</p>
+
+<h2 class="guide-title">How it Works</h2>
+<h4 style="margin-top: 1rem;">Working example</h4>
+<div class="terminal">
+    main:    A --- B --- C  
+    feature:       D --- E<br>
+</div>  
+
+<h4 style="margin-top: 1rem;">Running: </h4>
+<div class="terminal">
+    <span class="prompt">$</span>git checkout feature
+    <span class="prompt">$</span>git rebase main<br>
+</div> 
+
+<h4 style="margin-top: 1rem;">D and E (commits) are rewritten on C </h4>
+<div class="terminal">
+    main:    A --- B --- C  
+    feature:             D' --- E'<br>
+</div>  
+
+<div class="list-elements">
+    <ul>
+        <li>Cleaner, linear history, making it easier to read and follow.</li>
+        <li>Avoids unnecessary merge commits.</li>
+        <li>Lets you update your feature branch with the latest from main before merging.</li>
+    </ul>
+</div>
+
+<div class="warning">
+    <p>"git rebase" overrides commit history, therefore its best practice to avoid rebasing shared branches</p>
+</div>
+
+<h4 style="margin-top: 1rem;">Cancelling a rebase </h4>
+<div class="terminal">
+    <span class="prompt">$</span>git rebase --abort <br>
+</div> 
+
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">Rebasing allows developers to create clean, linear branches by replaying commits onto a new base, preserving the commit history in a streamlined way.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does git rebase do to your commits?</h4>
+<h4 class="question-sub">How does git rebase affect the project history compared to git merge?</h4>
+<h4 class="question-sub">What command do you use to cancel a rebase if conflicts become too complex?</h4>
+
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

@@ -1,0 +1,46 @@
+<h2>Reset</h2>
+<p>"Resetting" is a command that allows users to undo changes by moving the current branch’s HEAD to a specified state. It can unstage files, revert commits, or even discard changes depending on the options used. In essence, git reset is applicable for reverting past changes.</p>
+
+
+<h2 class="guide-title">Three Modes</h2>
+<div class="list-elements">
+    <ul>
+        <li><strong>--soft: </strong>Moves HEAD but leaves changes staged.</li>
+        <li><strong>--mixed (default): </strong>Moves HEAD and unstages changes, but keeps them in the working directory.</li>
+        <li><strong>--hard: </strong>Moves HEAD and discards ALL changes in working directory and staging area.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Common Commands</h2>
+
+<h4 style="margin-top: 1rem;">Unstage file.txt</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git reset HEAD {file}.txt
+</div>
+
+<h4 style="margin-top: 1rem;">Undo last commit but keep changes staged</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git reset --soft HEAD~1 
+</div>
+
+<h4 style="margin-top: 1rem;">Undo last commit, unstage changes but keep them locally</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git reset --mixed HEAD~1  
+</div>
+
+<h4 style="margin-top: 1rem;">Undo last commit and discard changes completely</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git reset --hard HEAD~1          
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">"git reset" is useful for rectifying mistakes or cleaning up commits before pushing.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does git reset do when used without any options?</h4>
+<h4 class="question-sub">What is the difference between git reset --soft, --mixed, and --hard?</h4>
+<h4 class="question-sub">How can you use git reset to unstage a file before committing?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Git Basics Complete</h2>
+</div>

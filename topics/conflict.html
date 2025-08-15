@@ -1,0 +1,40 @@
+<h2>Merge Conflicts</h2>
+<p>A merge conflict happens when Git can’t automatically combine changes from two branches because the same part of a file was changed differently in each branch. These discrepancies can be resolved in a variety of ways by aborting or reverting commits.</p>
+
+<h2 class="guide-title">Why do Merge Conflicts Occur?</h2>
+<div class="list-elements">
+    <ul>
+        <li>Two branches modify the same line of a file differently.</li>
+        <li>Changes overlap or contradict each other.</li>
+        <li>Git doesn’t know which version is correct.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Common Commands</h2>
+
+<h4 style="margin-top: 1rem;">Aborting a merge</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git merge --abort <br>
+</div>
+
+<h4 style="margin-top: 1rem;">Using mergetool for resolution</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git mergetool <br>
+</div>
+
+<h4 style="margin-top: 1rem;">Reverting a commit</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git revert &lt;commit&gt; <br>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">A merge conflict occurs when Git cannot automatically reconcile differences because two branches have conflicting changes to the same part of a file.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What causes a merge conflict in Git?</h4>
+<h4 class="question-sub">What are some ways to rectify a merge conflict?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Git Branching Complete</h2>
+</div>
+

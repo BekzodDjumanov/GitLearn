@@ -1,0 +1,76 @@
+<h2>Continuous Deployment</h2>
+<p>Continuous deployment is the practice of frequently releasing or deploying code that has been verified through external models such as automated tests. It ensures that software is always in a deployable state and accelerates the release process, reducing bottlenecks and improving feedback speed.</p>
+
+<h2 class="guide-title">Core Concepts</h2>
+
+<div class="list-elements">
+    <ul>
+        <li><strong>Fully Automated Releases: </strong>No manual intervention after code passes CI tests.</li>
+
+        <li><strong>Reduced Deployment Risk: </strong>Smaller, frequent updates lower the chance of major failures.</li>
+
+        <li><strong>Faster User Feedback: </strong>Changes reach users quickly, allowing faster improvements.</li>
+
+        <li><strong>Requires Strong Testing Culture: </strong>Automation must be reliable to avoid pushing broken code.</li>
+
+        <li><strong>Cost Heavy: </strong> the process of deployment can incur significant expenditure depending on workflow models and configuration.</li>
+    </ul>
+</div>
+
+<h2 class="summary" style="color: oklch(87.1% .15 154.449);">The Goal</h2>
+<p>To automate deployment and deliver practical code and/or products.</p>
+
+<h2 class="guide-title">Common CD Workflow</h2>
+
+<div class="git-init-badge-workflow" style="margin-top: 1rem; display: block;">
+    <span2># Developer pushes changes to main branch <br></span2>
+    git push origin main<br><br>
+    
+    <span2># CI pipeline runs: </span2><br>
+    <span2># 1. Install dependencies</span2><br>
+    <span2># 2. Build production-ready artifacts (e.g., Docker image)</span2><br>
+    <span2># 3. Run integration and end-to-end tests</span2><br>
+    <span2># 4. Report success or failure</span2><br><br>
+    
+    <span2># CD pipeline runs automatically if CI passes: </span2><br>
+    <span2># 1. Deploy artifacts to production environment</span2><br>
+    <span2># 2. Run post-deployment smoke tests</span2><br>
+    <span2># 3. Monitor logs and metrics for issues</span2><br>    
+</div>
+
+<h2 class="guide-title">Examples of CD Platforms</h2>
+
+<div class="helpful-container">
+    <div class="helpful-wrapper">
+      <img class="helpful-png" src="topics/vercel.png" height="50" width="50">
+      <p>Vercel is a web hosting platform that supports frontend development and continuous deployment.</p>
+    </div>
+  
+    <div class="helpful-wrapper">
+      <img class="helpful-png" src="topics/netlify.png" height="50" width="50">
+      <p>Netlify is a cloud platform for automating modern web projects, with integrated continuous deployment from Git.</p>
+    </div>
+  
+    <div class="helpful-wrapper">
+      <img class="helpful-png" src="topics/railway.png" style="background: white;" height="50" width="50">
+      <p>Railway is a deployment platform for hosting apps, databases, and services with automatic Git-based deployment.</p>
+    </div>
+  
+    <div class="helpful-wrapper">
+      <img class="helpful-png" src="topics/render.png" height="50" width="50">
+      <p>Render is a unified cloud platform that offers hosting, databases, and continuous deployment from Git repositories.</p>
+    </div>
+</div>  
+
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">Continuous Deployment is the process of frequently posting verified code and/or product.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does Continuous Deployment aim to do?</h4>
+<h4 class="question-sub">How is Continuous Delivery different from Continuous Deployment?</h4>
+<h4 class="question-sub">Which of these is a common benefit of CD?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

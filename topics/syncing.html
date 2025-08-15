@@ -1,0 +1,63 @@
+<h2>Syncing</h2>
+<p>Syncing repositories refers to the process of maintaining changes between a local and remote repository. This is done by pulling new changes from the remote and pushing your local changes back to it.</p>
+
+<h2 class="summary" style="color: #ff0;">Recall</h2>
+
+<h2 class="guide-title">Common Commands</h2>
+
+<h4 style="margin-top: 1rem;">Sends commits from local to remote branch</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git push &lt;remote&gt; branch&gt;
+</div>
+
+<h4 style="margin-top: 1rem;">Fetches changes from remote and merges them into local branch</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git pull &lt;remote&gt; branch&gt;
+</div>
+
+<h4 style="margin-top: 1rem;">Download changes from remote without merging</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git fetch &lt;remote&gt;
+</div>
+
+<h2 class="guide-title">Best Practices</h2>
+
+<div class="list-elements">
+    <ul>
+        <li><strong>Pull before you push: </strong>Prevents conflicts by making sure you’re working on the latest version.</li>
+
+        <li><strong>Check status often: </strong>Run git status to see if your local branch is ahead, behind, or has conflicts.</li>
+
+        <li><strong>Commit before syncing: </strong>Git won’t push uncommitted changes.</li>
+
+        <li><strong>Resolve conflicts quickly: </strong>If pull results in merge conflicts, fix them before pushing.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Basic Workflow</h2>
+
+<div class="git-init-badge-workflow" style="margin-top: 2rem; display: block;">
+    <span2># Pull to get any remote changes</span2> <br>
+    <span class="prompt">$</span> git pull origin main <br><br>
+
+    <span2># Make changes locally and commit them</span2> <br>
+    <span class="prompt">$</span> git add . <br>
+    <span class="prompt">$</span> git commit -m "Update feature" <br><br>
+
+    <span2># Push changes back to remote</span2> <br>
+    <span class="prompt">$</span> git push origin main <br>
+</div>
+
+<p style="margin-top: 1rem;"><i class="fa-solid fa-lightbulb"></i> <span5>Think of the workflow as kicking in futball, you must receive the ball (pull) in order to kick toward the keeper (push).</span5></p>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">Syncing allows developers to maintain consistent code within their local and remote repositories.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">Explain why pulling before pushing is considered a best practice when syncing repositories.</h4>
+<h4 class="question-sub">Describe what happens step-by-step when you run <code>git push origin main</code>.</h4>
+<h4 class="question-sub">List a real-world scenario where git fetch would be preferred over <code>git pull</code> and explain why.</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

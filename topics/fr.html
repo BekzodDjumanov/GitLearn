@@ -1,0 +1,69 @@
+<h2>Forking Repositories</h2>
+<p>Forking refers to creating a new repository from someone else's, copying everything within the original. The repository is placed within the creators GitHub account.</p>
+
+<h2 class="summary">Use Case</h2>
+<p>It’s commonly used in open-source development so you can freely experiment, make changes, and then contribute those changes back to the original project.</p>
+
+<h2 class="guide-title">Why Fork?</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Unlike cloning, forking allows developers to create <strong>new and separate</strong> repositories under their GitHub account. This provides full control and is not dependent on the original.</li>
+
+        <li>Cloning creates a local copy of a repository that still points to the original remote — best for collaboration within the same project.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Usage and Application</h2>
+
+<p>1. Contributing to open-source projects via Pull Requests.</p>
+
+<p>2. Customizing a project without interfering with the main repository.</p>
+
+<p>3. Experimenting with features in a safe environment.</p>
+
+<h2 class="guide-title">Common Workflow</h2>
+
+<h4 style="margin-top: 1rem;">1. Fork</h4>
+<img src="topics/fork.png" class="code-snippet" style="margin-top: 2rem;">
+
+<h4 style="margin-top: 1rem;">2. Clone repo into local environment</h4>
+
+<div class="git-init-badge-workflow" style="margin-top: 2rem; display: block;">
+    <span class="prompt">$</span> git clone https://github.com/your-username/forked-repo.git
+</div>
+
+<h4 style="margin-top: 1rem;">3. Commit & push your changes</h4>
+
+<div class="git-init-badge-workflow" style="margin-top: 2rem; display: block;">
+    <span class="prompt">$</span> git push origin main
+</div>
+
+<h4 style="margin-top: 1rem;">4. Commit & push your changes</h4>
+
+<div class="git-init-badge-workflow" style="margin-top: 2rem; display: block;">
+    Open a Pull Request on GitHub to suggest your changes to the original repository.
+</div>
+
+<h4 style="margin-top: 1rem; line-height: 1.7;">5. After forking, you can set the original repository as an upstream remote to keep your fork in sync</h4>
+
+<div class="git-init-badge-workflow" style="margin-top: 2rem; display: block;">
+    git remote add upstream https://github.com/original-owner/original-repo.git <br><br>
+    git pull upstream main
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">Forking allows developers to contribute to or utilize repositories.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">Explain the main difference between cloning and forking a repository.</h4>
+<h4 class="question-sub">Describe a situation where forking a repository is a better choice than cloning.</h4>
+<h4 class="question-sub">What is the purpose of setting an upstream remote after forking a repository?</h4>
+
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>
+
+
+

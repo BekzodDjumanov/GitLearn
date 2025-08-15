@@ -1,0 +1,77 @@
+<h2>Git Checkout</h2>
+<p>In Git, checkout is a powerful command that lets you switch branches or revert your working directory to a previous state. It allows users to switch between different branches, restore specific files, and navigate to specific commits in a repo.</p>
+
+<h2 class="summary">Checkout is a Time Machine</h2>
+<div class="container">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<h2 class="guide-title" style="margin-top: -1rem;">Common Commands</h2>
+<h4 style="margin-top: 1rem;">Switching branches</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git checkout feature-branch
+</div>
+
+<div class="list-elements">
+    <ul>
+        <li>Moves your HEAD (your current working pointer) to the branch feature-branch.</li>
+        <li>Updates your working directory to match that branch.</li>
+    </ul>
+</div>
+
+<h4 style="margin-top: 1rem;">Creating & Switching in One Command</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git checkout -b new-feature
+</div>
+
+<div class="list-elements">
+    <ul>
+        <li>-b creates the branch and immediately checks it out.</li>
+    </ul>
+</div>
+
+<h4 style="margin-top: 1rem;">Checking out a commit</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git checkout 3f5b2a1
+</div>
+
+<div class="list-elements">
+    <ul>
+        <li>This puts you into detached <strong>HEAD</strong> state, meaning you’re looking at an older snapshot and not on a branch.</li>
+    </ul>
+</div>
+
+<h4 style="margin-top: 1rem;">Restoring a file</h4>
+
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git checkout HEAD -- file.txt
+</div>
+
+<div class="list-elements">
+    <ul>
+        <li>Restores file.txt to the state it had in the latest commit on the current branch.</li>
+        <li>If you replace HEAD with a commit hash or branch name, it restores from that point instead.</li>
+    </ul>
+</div>
+
+<div class="warning">
+    <p>Always make sure you commit your changes before switching branches.</p>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">"git checkout" is a powerful feature in git that allows developers to revert or modify branches in order to adjust their project visions. This includes changes and restoration.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What does <code>git checkout &lt;branch&gt;</code> do?</h4>
+<h4 class="question-sub">Which command creates and switches to a new branch called <code>feature</code> in one step?</h4>
+<h4 class="question-sub">What does <code>git checkout -- README.md</code> do?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

@@ -1,0 +1,36 @@
+<h2>Amending Commits</h2>
+<p>the amend feature (git commit --amend) allows users to alter the most recent commit, which can include typos, implement forgotten changes, preserving commit history.</p>
+
+<h2 class="guide-title">Common Commands</h2>
+
+<h4 style="margin-top: 1rem;">Amending a commit</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git commit --amend -m "New commit message"
+</div>
+
+<h4 style="margin-top: 1rem;">Adding file to last commit</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git add forgotten-file.txt
+    <span class="prompt">$</span> git commit --amend --no-edit
+</div>
+
+<h4 style="margin-top: 1rem;">Interactive editing</h4>
+<div class="git-init-badge-started" style="margin-top: 1rem;">
+    <span class="prompt">$</span> git commit --amend
+</div>
+
+<div class="warning">
+    <p>Avoid amending commits that have already been pushed to a shared remote — it rewrites history and can cause conflicts for others.</p>
+</div>
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">git commit --amend is a helpful feature that allows you to modify the most recent commit.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">What is the main purpose of amending?</h4>
+<h4 class="question-sub">How can a user change a file in their most recent commit?</h4>
+<h4 class="question-sub">Why should you avoid amending commits that have already been pushed?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>

@@ -1,0 +1,85 @@
+<h2>Feature Branch Workflow</h2>
+<p>A feature branch workflow is a type of Git collaboration model that includes multiple different branches where updates, changes, and modifications are made. Then subsequently merged into a main branch, allowing multiple developers to work simultaneously without interfering with each other’s work. </p>
+
+<h2 class="guide-title">How it Works</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>1. Create a new branch for your feature. </li>
+
+        <li>2. Develop your feature and commit changes locally.</li>
+            
+        <li>3. Push the branch to the remote repository.</li>
+
+        <li>4. Open a Pull Request (or Merge Request) to merge into main.</li>
+
+        <li>5. Review and merge after approval.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">When to Use</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Teams working on multiple features at the same time.</li>
+
+        <li>Projects requiring code review and CI/CD before merging.</li>
+            
+        <li>When you want to isolate experimental or unstable code from the main branch.</li>
+    </ul>
+</div>
+
+<h2 class="guide-title">Common Workflow Command</h2>
+
+<div class="git-init-badge-workflow" style="margin-top: 1rem;">
+    <span2># Create a new feature branch <br></span2>
+    <span class="prompt">$</span> git checkout -b feature/add-login <br><br>
+
+    <span2># Make changes and commit <br></span2>
+    <span class="prompt">$</span> git add . <br><br>
+
+    <span class="prompt">$</span> git commit -m "Add login form with validation" <br><br>
+    
+    <span2># Push branch to remote <br></span2>
+    <span class="prompt">$</span> git push origin feature/add-login <br><br>
+
+    <span2># Open Pull Request to merge into main <br></span2>
+</div>
+
+
+<h2 class="summary" style="color: oklch(87.1% .15 154.449);">Advantages</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>Isolated development for safer experimentation.</li>
+
+        <li>Easier code review and testing.</li>
+
+        <li>Choosing when to merge committed branches.</li>       
+    </ul>
+</div>
+
+<h2 class="summary" style="color: oklch(87.1% 0.30 30)">Disadvantages</h2>
+
+<div class="list-elements">
+    <ul>
+        <li>More branches to manage.</li>
+
+        <li>Potential for merge conflicts after merging multiple branches.</li>
+            
+    </ul>
+</div>
+
+
+<h2 class="summary">Summary</h2>
+<p class="summary-sub">A feature branch workflow includes multiple branches that eventually merge into a sole main branch.</p>
+
+<h2 class="question-title">Questions</h2>
+<h4 class="question-sub">Why is a feature branch used instead of committing directly to main?</h4>
+<h4 class="question-sub">How do you create a new feature branch in Git?</h4>
+<h4 class="question-sub">What is the purpose of a Pull Request in this workflow?</h4>
+
+<div class="section-c">
+    <h2><i class="fa-solid fa-check"></i> Section Complete</h2>
+</div>
+
