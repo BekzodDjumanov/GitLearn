@@ -65,3 +65,9 @@ Backend: JS
 GitLearn prioritizes security by keeping user data anonymous and avoiding the need for logins.
 
 ⚔️ The framework of this project remains and will not contravene with the ethical foundation of programming and software application. ⚔️
+
+### 📖 License & Copyright
+
+This project is licensed under the MIT License. For more information, see the LICENSE file.
+
+This project is not affiliated with, endorsed, or sponsored by © GitHub 2025. This is an independent project created purely for educational and inspirational purposes. All trademarks, logos, and brand names associated with Mastermind are the property of their respective owners
