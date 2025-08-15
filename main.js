@@ -1,8 +1,8 @@
-// THIS IS FOR HAMBURGER TRIGGER
+// 1. hamburger management, specifically on smaller screens
 const checkbox = document.querySelector("#hamburger input[type='checkbox']");
 const dropdownMenu = document.getElementById("dropdownMenu");
 
-// THIS IS SPECIFICALLY FOR THE DROP DOWN ON SMALLER SCREENS (HEADER)
+// 2. dropdown menu for smaller screens
 checkbox.addEventListener("change", () => {
   if (checkbox.checked) {
     dropdownMenu.style.display = "flex";
@@ -25,11 +25,9 @@ checkbox.addEventListener("change", () => {
   }
 });
 
-// THIS IS FOR TRIGGERING CONFETTI AND INITIATING EACH DATA TOPIC ON CLICK
-// Get the confetti element
+// 3. handling confetti when data-topic = conclusion is detected
 const confetti = document.getElementById("confetti");
 
-// Shared function to load topic and handle confetti visibility
 function handleTopicChange(topicId) {
   loadTopic(topicId);
 
@@ -39,16 +37,14 @@ function handleTopicChange(topicId) {
     confetti.style.opacity = "0";
   }
 }
-
-// Listen on submenu items
+// 4. allows js to retrieve each data-topic clicking submenu li respectively
 document.querySelectorAll(".submenu li").forEach((li) => {
   li.addEventListener("click", function () {
     const topicId = this.getAttribute("data-topic");
     handleTopicChange(topicId);
   });
 });
-
-// Listen on top-level menu items
+// 5. this executes the page for when data-topic is recognized
 document.querySelectorAll(".menu-item[data-topic]").forEach((li) => {
   li.addEventListener("click", function () {
     const topicId = this.getAttribute("data-topic");
@@ -56,7 +52,7 @@ document.querySelectorAll(".menu-item[data-topic]").forEach((li) => {
   });
 });
 
-// THIS IS FOR CONFETTI AND ITS DESIGN
+// 6. confetti design & etc
 const canvas = document.getElementById("confetti");
 const ctx = canvas.getContext("2d");
 let pieces = [];
@@ -66,7 +62,7 @@ function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-
+// 7. random colors that align with the "normal" conventions of confetti
 function randomColor() {
   const colors = [
     "#f87171",
@@ -128,21 +124,18 @@ resizeCanvas();
 createPieces();
 loop();
 
-// THIS IS FOR GSAP ANIMATION WHEN DATA-TOPIC IS CLICKED
+// 8. this is for when gsap fades out & fades in the content on data-topic
 const content = document.getElementById("content");
 
 function loadTopic(topicId) {
-  // Fade out old content first
   gsap.to(content, {
     duration: 0.5,
     opacity: 0,
     onComplete: () => {
-      // Fetch new HTML
       fetch(`topics/${topicId}.html`)
         .then((res) => res.text())
         .then((html) => {
           content.innerHTML = html;
-          // Fade new content in
           gsap.to(content, { duration: 0.5, opacity: 1, ease: "power2.inOut" });
         })
         .catch((err) => {
@@ -153,25 +146,22 @@ function loadTopic(topicId) {
   });
 }
 
-// THIS IS FOR COLOR STAYING RED WHEN CLICKED ON SUBMENU LI
+// 9. this allows js to hold the red active css that I defined when clicking on each submenu-li, respectively
 document.querySelectorAll(".submenu li, .nested-submenu li").forEach((li) => {
   li.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent bubbling up
+    e.stopPropagation();
 
-    // Remove active from ALL li elements in all submenus
     document
       .querySelectorAll(".submenu li, .nested-submenu li")
       .forEach((item) => {
         item.classList.remove("active");
       });
 
-    // Add active only to the clicked li
     li.classList.add("active");
   });
 });
 
-// THIS IS FOR WHEN EXPANDING PRIMARY TOPICS
-// Expand/collapse submenus and rotate icon inside menu header
+// 10. expanding li and nested li
 document.querySelectorAll(".menu-header").forEach((header) => {
   header.addEventListener("click", () => {
     const submenu = header.nextElementSibling;
@@ -187,7 +177,6 @@ document.querySelectorAll(".menu-header").forEach((header) => {
     const isOpen = submenu.style.maxHeight && submenu.style.maxHeight !== "0px";
 
     if (isOpen) {
-      // Animate closing submenu
       gsap.to(submenu, {
         maxHeight: 0,
         duration: 0.3,
@@ -196,18 +185,15 @@ document.querySelectorAll(".menu-header").forEach((header) => {
       icon.classList.remove("rotate");
       submenu.style.overflow = "hidden";
     } else {
-      // Animate opening submenu
-
       gsap.to(submenu, {
         maxHeight: submenu.scrollHeight,
         duration: 0.3,
         ease: "power1.inOut",
         onStart: () => {
-          icon.classList.add("rotate"); // add rotate BEFORE animation starts
+          icon.classList.add("rotate");
         },
       });
 
-      // Animate parent submenus to adjust height smoothly
       let parent = submenu.parentElement.closest(".submenu, .nested-submenu");
       while (parent) {
         submenu.style.overflow = "visible";
@@ -222,7 +208,7 @@ document.querySelectorAll(".menu-header").forEach((header) => {
   });
 });
 
-// FOR SIDE BAR ON SMALLER SCREENS
+// 11. this is for sidebar on smaller screens on getting-started.html
 const checkbox2 = document.getElementById("checkbox2");
 const sidebar = document.querySelector(".sidebar");
 const overlay = document.querySelector(".overlay");
@@ -243,11 +229,9 @@ checkbox2.addEventListener("change", () => {
   }
 });
 
-// Hide sidebar if overlay is clicked
 overlay.addEventListener("click", hideSidebar);
 
-// THIS HIDES THE INTRODUCTION WHEN PROMPTED TO THE PAGE
-// Change content when subtopic clicked
+// 12. hides the content (beginning with the introduction) after submenu-li is clicked
 document.querySelectorAll(".submenu li").forEach((item) => {
   item.addEventListener("click", () => {
     const key = item.getAttribute("data-topic");
@@ -261,14 +245,12 @@ document.querySelectorAll(".submenu li").forEach((item) => {
     );
   });
 });
-// FILTERING LOGIC
+// 13. handles js filtering logic for searching
 const searchInput = document.querySelector(".search-input");
 const resultsList = document.querySelector(".search-results");
 
-// Get all list items with data-topic attribute
 const topicItems = document.querySelectorAll("[data-topic]");
 
-// Build a search index
 const topics = Array.from(topicItems).map((item) => ({
   text: item.textContent.trim(),
   element: item,
@@ -308,14 +290,13 @@ searchInput.addEventListener("input", function () {
   resultsList.style.display = "block";
 });
 
-// Hide results if clicking outside
 document.addEventListener("click", function (e) {
   if (!searchInput.contains(e.target) && !resultsList.contains(e.target)) {
     resultsList.style.display = "none";
   }
 });
 
-// THIS HIDES THE DROP DOWN WHEN RESIZING HEADER
+// 14. resizing mobile -> laptop
 window.addEventListener("resize", () => {
   if (window.innerWidth > 900 && checkbox.checked) {
     checkbox.checked = false;
@@ -324,7 +305,7 @@ window.addEventListener("resize", () => {
   }
 });
 
-// IDK
+// 15. scrollreveal library
 const sr = ScrollReveal({
   distance: "65px",
   duration: 2600,
