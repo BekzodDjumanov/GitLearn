@@ -468,6 +468,8 @@ span5 {
   z-index: -2;
   border-radius: 24px;
   animation: spinIdk 5s linear infinite;
+  transform: translate(-50%, -50%) translateZ(0);
+  will-change: transform;
 }
 
 .btn-1::after {
