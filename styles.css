@@ -785,6 +785,12 @@ span4 {
     grid-template-columns: 1fr;
     border: none;
   }
+  .grid-wrapper::after {
+    display: none;
+  }
+  .grid-wrapper::before {
+    display: none;
+  }
 }
 @media (max-width: 550px) {
   .git-init-badge {
