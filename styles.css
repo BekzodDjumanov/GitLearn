@@ -450,9 +450,10 @@ span5 {
   transition: 0.3s ease-in-out;
   border: none;
   z-index: 1;
+  border: 1px solid white;
 }
 
-.btn-1::before {
+/*.btn-1::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -485,7 +486,7 @@ span5 {
   );
   border-radius: 24px;
   z-index: -1;
-}
+}*/
 @property --angle2 {
   syntax: "<angle>";
   inherits: false;
