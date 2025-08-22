@@ -946,7 +946,6 @@ span4 {
   transform: translateY(2px);
   backdrop-filter: blur(6px);
   margin-bottom: 0.5rem;
-  filter: drop-shadow(0 0 4px rgba(240, 60, 46, 0.5));
 }
 
 .footer-brand h2 i {
