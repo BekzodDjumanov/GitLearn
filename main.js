@@ -313,7 +313,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// 14. hiding and toggling button
+// 14. hiding and toggling button (scroll up function)
 const mybutton = document.getElementById("myBtn");
 
 let isVisible = false;
