@@ -25,6 +25,23 @@ checkbox.addEventListener("change", () => {
   }
 });
 
+// for resizing dropdown on responsiveness
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1100 && checkbox.checked) {
+    checkbox.checked = false; // uncheck hamburger
+
+    gsap.to(dropdownMenu, {
+      opacity: 0,
+      y: -20,
+      duration: 0.3,
+      ease: "power2.in",
+      onComplete: () => {
+        dropdownMenu.style.display = "none";
+      },
+    });
+  }
+});
+
 // 3. handling confetti when data-topic = conclusion is detected
 const confetti = document.getElementById("confetti");
 
@@ -296,13 +313,44 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// 14. resizing mobile -> laptop
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 900 && checkbox.checked) {
-    checkbox.checked = false;
-    dropdownMenu.style.pointerEvents = "none";
-    gsap.set(dropdownMenu, { opacity: 0, y: -20 });
+// 14. hiding and toggling button
+const mybutton = document.getElementById("myBtn");
+
+let isVisible = false;
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+  if (
+    document.documentElement.scrollTop > 200 ||
+    document.body.scrollTop > 200
+  ) {
+    if (!isVisible) {
+      gsap.to(mybutton, {
+        duration: 0.4,
+        opacity: 1,
+        y: 0,
+        pointerEvents: "auto",
+        ease: "power2.out",
+      });
+      isVisible = true;
+    }
+  } else {
+    if (isVisible) {
+      gsap.to(mybutton, {
+        duration: 0.4,
+        opacity: 0,
+        y: 20,
+        pointerEvents: "none",
+        ease: "power2.in",
+      });
+      isVisible = false;
+    }
   }
+}
+
+mybutton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // 15. scrollreveal library
