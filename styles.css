@@ -7,7 +7,6 @@
 }
 html,
 body {
-  overscroll-behavior: none;
   scroll-behavior: smooth;
   color: #fff;
   overflow-x: hidden;
